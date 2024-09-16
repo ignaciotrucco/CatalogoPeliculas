@@ -14,10 +14,15 @@ function ListadoDePeliculas() {
             let contenidoTabla = ``;
 
             $.each(peliculas, function (index, pelicula) {
-                let alquiladaCheckbox = pelicula.alquilada 
-                ? '<input type="checkbox" checked disabled>'
-                : '<input type="checkbox" disabled>';
-
+                let alquiladaCheckbox;
+                
+                if (pelicula.alquilada) {
+                    alquiladaCheckbox = '<input type="checkbox" checked disabled>';
+                }
+                else {
+                   alquiladaCheckbox = '<input type="checkbox" disabled>'; 
+                }
+            
 
                 contenidoTabla += `
                     <tr>

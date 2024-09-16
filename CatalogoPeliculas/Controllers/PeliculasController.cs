@@ -115,6 +115,7 @@ public class PeliculasController : Controller
         {
             _context.Pelicula.Remove(eliminarPelicula);
             _context.SaveChanges();
+            resultado = "Pelicula eliminada correctamente";
         }
 
         return Json(resultado);
